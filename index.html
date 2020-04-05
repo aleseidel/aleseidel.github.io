@@ -7,10 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500&display=swap" rel="stylesheet">
     <title>arseidel</title>
 </head>
+
 <body style="background-color:black;"> 
     <div class="centra">
         <video loop muted playsinline autoplay="autoplay" class="centra">
-            <source src="IMG_2609.mp4" type="video/mp4">
+            <source id= "animojiVideo" type="video/mp4">
         </video>
         <div class="subtitle">Alexandre Seidel</div>
     </div>
@@ -23,7 +24,10 @@
         <div class="profileLink"><a href="https://www.linkedin.com/in/arseidel/"><i class="fab fa-linkedin"></i></a> &nbsp; <a href="mailto:arseidel2003@gmail.com"><i class="fas fa-envelope-square"></i></a></div>
 </body>
 </html>
-
+<script>
+    videosList =  ["IMG_2606.mp4", "IMG_2608.mp4", "IMG_2609.mp4", "IMG_2610.mp4",]
+    animojiVideo.src = videosList[Math.floor(Math.random() * videosList.length)]
+</script>
 <style>
     .centra {
         padding-top: 20px;
@@ -60,6 +64,5 @@
     font-family: 'Baloo Paaji 2', cursive;
 }
 </style>
-
 
 
