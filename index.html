@@ -25,7 +25,7 @@
 <script>
     var currentDate = new Date();
     console.log(currentDate.getHours())
-    if (currentDate.getHours() >= 21  && currentDate.getHours() <= 24|| currentDate.getHours() >= 0 && currentDate.getHours() < 5){
+    if (currentDate.getHours() >= 21|| currentDate.getHours() < 5){
         videosList =  ["sleep1.MP4", "sleep2.mp4"];
         defaultVideo.title = "sleepy!";
     }else{
