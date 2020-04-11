@@ -11,9 +11,9 @@
 </head>
 
 <body style="background-color:black;"> 
-    <div class="centra">
-        <video loop muted playsinline autoplay="autoplay" class="centra">
-            <source id= "animojiVideo" type="video/mp4">
+    <div class="centerVideo">
+        <video loop muted playsinline autoplay="autoplay" class="centerVideo" id="defaultVideo">
+            <source id="animojiVideo" type="video/mp4">
              I think there's supposed to have something else...
         </video>
     </div>
@@ -27,7 +27,7 @@
     console.log(currentDate.getHours())
     if (currentDate.getHours() >= 21  && currentDate.getHours() <= 24|| currentDate.getHours() >= 0 && currentDate.getHours() < 5){
         videosList =  ["sleep1.MP4", "sleep2.mp4"];
-        animojiVideo.title = "sleepy!";
+        defaultVideo.title = "sleepy!";
     }else{
     videosList =  ["1.MP4", "2.MP4", "3.MP4", "4.mp4"]
     }
