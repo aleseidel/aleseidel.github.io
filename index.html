@@ -6,14 +6,12 @@
     <script src="https://kit.fontawesome.com/e1b8b7b0ff.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src=></script>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500&display=swap" rel="stylesheet">
     <title>@arseidel's git page</title>
 </head>
-
 <body style="background-color:black;"> 
     <div class="entirePage">
-    <div class="centerVideo">
+    <div class="centerVideo" onclick="mudarVideo()">
         <video loop muted playsinline autoplay="autoplay" class="centerVideo" id="defaultVideo">
             <source id="animojiVideo" type="video/mp4">
              I think there's supposed to have something else...
@@ -25,30 +23,15 @@
     <div class="repos">my repos<br></div>
     </div>
 </body>
-</html>
+<script type ="text/javascript" src="./main.js"></script>
 <script>
-    var currentDate = new Date();
-    if (currentDate.getHours() >= 21|| currentDate.getHours() < 5){
-        videosList =  ["sleep1.MP4", "sleep2.mp4"];
-        defaultVideo.title = "sleepy!";
-    }else{
-    videosList =  ["1.MP4", "2.MP4", "3.MP4", "4.mp4"]
-    }
-    animojiVideo.src = videosList[Math.floor(Math.random() * videosList.length)]
-    //Tentando consumir uma API!
-    fetch('https://api.github.com/users/aleseidel/repos')
-    .then(response => {
-        return response.json()
-    })
-    .then(data => {
-        data.forEach(element => {
-            $(".repos").append( '<a class="repoLinks" href="' + element.html_url + '" title="' + (element.description == null ? '""' : element.description) + '">' + element.name + '</a><br>' );
-        });
-    })
-    .catch(err => {
-        console.log("vixe")
-    })
+    document.addEventListener("DOMContentLoaded", function() {
+    mudarVideo();
+    });
 </script>
+</html>
+
+
 
 
 
