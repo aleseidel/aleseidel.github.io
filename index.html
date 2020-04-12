@@ -6,11 +6,13 @@
     <script src="https://kit.fontawesome.com/e1b8b7b0ff.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src=></script>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500&display=swap" rel="stylesheet">
     <title>@arseidel's git page</title>
 </head>
 
 <body style="background-color:black;"> 
+    <div class="entirePage">
     <div class="centerVideo">
         <video loop muted playsinline autoplay="autoplay" class="centerVideo" id="defaultVideo">
             <source id="animojiVideo" type="video/mp4">
@@ -21,6 +23,7 @@
         <div class="spec"><i class="fab fa-apple"></i> iOS student<br><i class="fas fa-database"></i> oracle db enthusiast</div>  
         <div class="profileLink"> <a href="mailto:arseidel2003@gmail.com"><i class="fas fa-envelope-square"></i></a> &nbsp; <a href="https://github.com/aleseidel"><i class="fab fa-github-square"></i></a> &nbsp; <a href="https://www.linkedin.com/in/arseidel/"><i class="fab fa-linkedin"></i></a></div>
     <div class="repos">my repos<br></div>
+    </div>
 </body>
 </html>
 <script>
@@ -39,7 +42,7 @@
     })
     .then(data => {
         data.forEach(element => {
-            $(".repos").append( '<a class="repoLinks" href="' + element.html_url + '">' + element.name + '</a><br>' );
+            $(".repos").append( '<a class="repoLinks" href="' + element.html_url + '" title="' + (element.description == null ? '""' : element.description) + '">' + element.name + '</a><br>' );
         });
     })
     .catch(err => {
