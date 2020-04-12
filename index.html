@@ -20,6 +20,7 @@
     <div class="subtitle">Alexandre Seidel</div>
         <div class="spec"><i class="fab fa-apple"></i> iOS student<br><i class="fas fa-database"></i> oracle db enthusiast</div>  
         <div class="profileLink"> <a href="mailto:arseidel2003@gmail.com"><i class="fas fa-envelope-square"></i></a> &nbsp; <a href="https://github.com/aleseidel"><i class="fab fa-github-square"></i></a> &nbsp; <a href="https://www.linkedin.com/in/arseidel/"><i class="fab fa-linkedin"></i></a></div>
+    <div class="repos">my repos<br></div>
 </body>
 </html>
 <script>
@@ -31,6 +32,19 @@
     videosList =  ["1.MP4", "2.MP4", "3.MP4", "4.mp4"]
     }
     animojiVideo.src = videosList[Math.floor(Math.random() * videosList.length)]
+    //Tentando consumir uma API!
+    fetch('https://api.github.com/users/aleseidel/repos')
+    .then(response => {
+        return response.json()
+    })
+    .then(data => {
+        data.forEach(element => {
+            $(".repos").append( '<a class="repoLinks" href="' + element.html_url + '">' + element.name + '</a><br>' );
+        });
+    })
+    .catch(err => {
+        console.log("vixe")
+    })
 </script>
 
 

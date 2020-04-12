@@ -35,11 +35,28 @@
          -o-animation: fadein 2s; /* Opera < 12.1 */
             animation: fadein 2s;
     }
+    .repos {
+        text-align: center;
+        align-content: center;
+        color: white;
+        font-family: 'Baloo Paaji 2';
+        font-size: 30px;
+        padding-top: 10px;
+    }
+    .repoLinks {
+        color: white;
+        font-family: 'Baloo Paaji 2';
+        font-size: 18px;
+    }
+    .repoLinks:hover{
+        color: rgb(92, 92, 92), 160, 160);
+        text-decoration: underline;
+    }
     .profileLink{
         color: white;
         text-align: center;
         align-content: center;
-        padding-top: 90px;
+        padding-top: 10px;
         font-size: 25px;
         -webkit-animation: fadein 5s;
         -moz-animation: fadein 2s; /* Firefox < 16 */
